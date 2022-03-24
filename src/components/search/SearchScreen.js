@@ -28,7 +28,7 @@ export const SearchScreen = () => {
             <hr />
 
             <form className="row" onSubmit={ handleSearch }>
-              <div class="input-group mb-3">
+              <div className="input-group mb-3">
                 <input
                   type="text"
                   placeholder="Ingresa tu búsqueda"
