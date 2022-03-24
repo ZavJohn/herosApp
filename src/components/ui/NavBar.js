@@ -11,7 +11,7 @@ export const Navbar = () => {
     };
 
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             
             <Link 
                 className="navbar-brand" 
@@ -20,21 +20,30 @@ export const Navbar = () => {
                 Asociaciones
             </Link>
 
-            <div className="navbar-collapse">
-                <div className="navbar-nav">
+            <div className="collapse navbar-collapse" id="navbarNav">
+                <div className="navbar-nav container-fluid">
 
                     <NavLink 
-                        className={ ( {isActive} ) => 'nav-item nav-link' +  (isActive ? 'active' : '') }
+                        className={ ( {isActive} ) => 'nav-item nav-link btn' +  (isActive ? 'active' : '') }
                         to="/marvel"
+                        aria-current="page"
                     >
                         Marvel
                     </NavLink>
 
                     <NavLink 
-                        className={ ( {isActive} ) => 'nav-item nav-link' +  (isActive ? 'active' : '') }
+                        className={ ( {isActive} ) => 'nav-item nav-link btn' +  (isActive ? 'active' : '') }
                         to="/dc"
+                        aria-current="page"
                     >
                         DC
+                    </NavLink>
+                    <NavLink 
+                        className={ ( {isActive} ) => 'nav-item nav-link btn' +  (isActive ? 'active' : '') }
+                        to="/search"
+                        aria-current="page"
+                    >
+                        Search
                     </NavLink>
                 </div>
             </div>
