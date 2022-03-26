@@ -18,7 +18,7 @@ const { q = ''} = querytString.parse(location.search);
 
  const { searchText } = formValues;
 
- const heroesFilter = useMemo( getHeroByName(q), [ q ] );
+ const heroesFilter = useMemo( () => getHeroByName(q), [ q ] );
  
  const handleSearch = (e) => {
     e.preventDefault();
