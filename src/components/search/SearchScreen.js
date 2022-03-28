@@ -65,7 +65,7 @@ const { q = ''} = querytString.parse(location.search);
 
             {
               (q==='')
-                ? <div className="alert alert-info">No se ingresaron criterioz de búsqueda</div>
+                ? <div className="alert alert-info">No se ingresaron criterios de búsqueda</div>
                     : ( heroesFilter.length === 0 ) 
                         && <div className="alert alert-danger">No se encontraron resultados en: { q }</div>
             }
